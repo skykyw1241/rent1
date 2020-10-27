@@ -75,6 +75,12 @@ public class Rental {
     @PostPersist
     private void onPostPersist() throws Exception {
 
+        try {
+            Thread.currentThread().sleep((long) (800 + Math.random() * 220));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        
         // 1. 상품 서비스에 수량을 직접 변경하여 JPA call
         RestTemplate restTemplate = Application.applicationContext.getBean(RestTemplate.class);
         Environment env = Application.applicationContext.getEnvironment();
