@@ -1,8 +1,8 @@
 
 api:
   url:
-    delivery: http://10.0.47.131:8088
-    book: http://10.0.47.131:8088
+    delivery: http://10.0.47.131:8080
+    book: http://10.0.47.131:8080
 
 spring:
   profiles: docker
